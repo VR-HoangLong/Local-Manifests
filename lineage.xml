@@ -6,7 +6,7 @@
                 revision="lineage-18.1" />
 
         <remote name="thinhx2"
-                fetch="https://gitlab.com/thinhx2" />
+                fetch="https://github.com/thinhx2" />
 
         <!-- Sync trees -->
         <project path="device/vsmart/V620A" name="android_device_vsmart_V620A" remote="hoanglong" />
