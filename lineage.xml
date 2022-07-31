@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+          
+        <remote name="github"
+                fetch="https://github.com" />
+
+        <remote name="gitlab"
+                fetch="https://gitlab.com" />
+
+        <!-- Sync trees -->
+        <project path="device/vsmart/V620A" name="VR-HoangLong/v620a-line" remote="github" revision="master" />
+        <project path="device/vsmart/sm6150-common" name="VR-HoangLong/sm6150-common-line" remote="github" revision="master" />
+        <project path="vendor/vsmart/V620A" name="thinhx2/android_vendor_vsmart_V620A" remote="github" revision="mkq" />
+        <project path="vendor/vsmart/sm6150-common" name="thinhx2/android_vendor_vsmart_sm6150-common" remote="github" revision="master" />
+
+</manifest>
