@@ -1,17 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<manifest>
-          
-        <remote name="hoanglong"
-                fetch="https://github.com/VR-HoangLong"
-                revision="lineage-18.1" />
+ <manifest>
+        
+ <remote  name="khalvat"
+    fetch="https://github.com/Khalvat-M"
+    revision="12.1" />
 
-        <remote name="thinhx2"
-                fetch="https://github.com/thinhx2" />
+ <remote  name="losul"
+    fetch="https://github.com/LineageOS-UL"
+    revision="lineage-19.1" />
 
-        <!-- Sync trees -->
-        <project path="device/vsmart/V620A" name="android_device_vsmart_V620A" remote="hoanglong" />
-        <project path="device/vsmart/sm6150-common" name="android_device_vsmart_sm6150-common" remote="hoanglong" />
-        <project path="vendor/vsmart/V620A" name="android_vendor_vsmart_V620A" remote="thinhx2" revision="mkq" />
-        <project path="vendor/vsmart/sm6150-common" name="android_vendor_vsmart_sm6150-common" remote="thinhx2" revision="master" />
+ <remote  name="linos"
+    fetch="https://github.com/LineageOS"
+    revision="lineage-19.1" />
 
-</manifest>
+ <remote  name="linos18"
+    fetch="https://github.com/LineageOS"
+    revision="lineage-18.1" />
+
+    <!-- Remove some projects -->
+    <remove-project name="platform/frameworks/av" />
+    <remove-project name="platform/frameworks/base" />
+    <remove-project name="platform/frameworks/native" />
+    <remove-project name="platform/frameworks/opt/telephony" />
+    <remove-project name="platform/hardware/lineage/interfaces" />
+    <remove-project name="platform/hardware/interfaces" />
+    <remove-project name="platform/system/bpf" />
+    <remove-project name="platform/system/core" />
+    <remove-project name="platform/system/netd" />
+    <remove-project name="platform/system/sepolicy" />
+    <remove-project name="platform/system/tools/dtbtool" />
+    <remove-project name="platform/hardware/lineage/interfaces" />
+    <remove-project name="platform/hardware/interfaces" />
+    <remove-project name="platform/hardware/ril" />
+    <remove-project name="vendor/lineage" />
+
+    <!--LineageOS UL -->
+    <project path="frameworks/av" name="LineageOS-UL/android_frameworks_av" remote="losul" />
+    <project path="frameworks/base" name="LineageOS-UL/android_frameworks_base" remote="losul" />
+    <project path="frameworks/native" name="LineageOS-UL/android_frameworks_native" remote="losul" />
+    <project path="frameworks/opt/telephony" name="LineageOS-UL/android_frameworks_opt_telephony" remote="losul" />
+    <project path="hardware/lineage/interfaces" name="LineageOS-UL/android_hardware_lineage_interfaces" remote="losul" />
+    <project path="hardware/interfaces" name="LineageOS-UL/android_hardware_interfaces" remote="losul" />
+    <project path="vendor/lineage" name="LineageOS-UL/android_vendor_lineage" remote="losul" />
+    <project path="system/bpf" name="LineageOS-UL/android_system_bpf" remote="losul" />
+    <project path="system/core" name="LineageOS-UL/android_system_core" remote="losul" />
+    <project path="system/netd" name="LineageOS-UL/android_system_netd" remote="losul" />
+    <project path="system/sepolicy" name="LineageOS-UL/android_system_sepolicy" remote="losul" />
+    <project path="system/tools/dtbtool" name="LineageOS-UL/android_system_tools_dtbtool" remote="losul" />
+    <project path="hardware/ril" name="LineageOS-UL/android_hardware_ril" remote="losul" />
+    <project path="hardware/qcom-caf/msm8974/audio" name="LineageOS-UL/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk-qcom" revision="lineage-19.1-caf-msm8974" />
+    <project path="hardware/qcom-caf/msm8974/display" name="LineageOS-UL/android_hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" revision="lineage-19.1-caf-msm8974" />
+    <project path="hardware/qcom-caf/msm8974/media" name="LineageOS-UL/android_hardware_qcom_media" groups="qcom,pdk-qcom" revision="lineage-19.1-caf-msm8974" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8974/Android.mk" />
+    <project path="device/qcom/sepolicy-legacy" name="LineageOS-UL/android_device_qcom_sepolicy" groups="qcom,pdk-qcom" revision="lineage-19.1-legacy" />
+
+    <!--LineageOS -->
+    <project name="android_hardware_samsung" path="hardware/samsung" remote="linos" />
+    <project name="android_hardware_sony_timekeep" path="hardware/sony/timekeep" remote="linos18"/>
+        
+    <!--Device -->
+    <project name="device_samsung_kltekdi" path="device/samsung/kltekdi" remote="khalvat" />
+    <project name="device_samsung_msm8974-common" path="device/samsung/msm8974-common" remote="khalvat" />
+           
+    <!--Kernel -->
+    <project name="kernel_samsung_msm8974" path="kernel/samsung/msm8974" remote="khalvat" />
+    
+    <!--Vendor -->
+    <project name="vendor_samsung" path="vendor/samsung" remote="khalvat" />
+                  
+ </manifest>
