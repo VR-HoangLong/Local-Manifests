@@ -13,6 +13,10 @@
     fetch="https://github.com/LineageOS"
     revision="lineage-18.1" />
 
+ <remote name="almond"
+    fetch="https://github.com/unalmondified"
+    revision="12.1" />
+
     <!--LineageOS -->
     <project name="android_hardware_samsung" path="hardware/samsung" remote="linos" />
     <project name="android_hardware_sony_timekeep" path="hardware/sony/timekeep" remote="linos18"/>
@@ -22,7 +26,7 @@
     <project name="device_samsung_msm8974-common" path="device/samsung/msm8974-common" remote="khalvat" />
            
     <!--Kernel -->
-    <project name="kernel_samsung_msm8974" path="kernel/samsung/msm8974" remote="khalvat" />
+    <project name="android_kernel_samsung_msm8974" path="kernel/samsung/msm8974" remote="almond" />
     
     <!--Vendor -->
     <project name="vendor_samsung" path="vendor/samsung" remote="khalvat" />
