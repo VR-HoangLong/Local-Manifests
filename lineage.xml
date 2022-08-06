@@ -4,7 +4,11 @@
  <remote  name="hoanglong"
     fetch="https://github.com/VR-HoangLong"
     revision="lineage-19.1" />
-        
+
+ <remote  name="linos"
+    fetch="https://github.com/LineageOS"
+    revision="lineage-19.1" />
+  
     <!--Device -->
     <project name="android_device_vsmart_V430A" path="device/vsmart/V430A" remote="hoanglong" />
     <project name="android_device_vsmart_sdm632-common" path="device/vsmart/sdm632-common" remote="hoanglong" />
@@ -12,5 +16,8 @@
     <!--Vendor -->
     <project name="android_vendor_vsmart_V430A" path="vendor/vsmart/V430A" remote="hoanglong" />
     <project name="android_vendor_vsmart_sdm632-common" path="vendor/vsmart/sdm632-common" remote="hoanglong" />
+
+    <!--Kernel -->
+    <project name="android_kernel_motorola_sdm632" path="kernel/motorola/sdm632" remote="linos" />
                   
  </manifest>
