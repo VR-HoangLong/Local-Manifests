@@ -1,34 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <manifest>
-        
- <remote  name="khalvat"
-    fetch="https://github.com/Khalvat-M"
-    revision="12.1" />
 
- <remote  name="linos"
-    fetch="https://github.com/LineageOS"
+ <remote  name="hoanglong"
+    fetch="https://github.com/VR-HoangLong"
     revision="lineage-19.1" />
-
- <remote  name="linos18"
-    fetch="https://github.com/LineageOS"
-    revision="lineage-18.1" />
-
- <remote name="almond"
-    fetch="https://github.com/unalmondified"
-    revision="12.1" />
-
-    <!--LineageOS -->
-    <project name="android_hardware_samsung" path="hardware/samsung" remote="linos" />
-    <project name="android_hardware_sony_timekeep" path="hardware/sony/timekeep" remote="linos18"/>
         
     <!--Device -->
-    <project name="device_samsung_kltekdi" path="device/samsung/kltekdi" remote="khalvat" />
-    <project name="device_samsung_msm8974-common" path="device/samsung/msm8974-common" remote="khalvat" />
-           
-    <!--Kernel -->
-    <project name="android_kernel_samsung_msm8974" path="kernel/samsung/msm8974" remote="almond" />
+    <project name="android_device_vsmart_V430A" path="device/vsmart/V430A" remote="hoanglong" />
+    <project name="android_device_vsmart_sdm632-common" path="device/vsmart/sdm632-common" remote="hoanglong" />
     
     <!--Vendor -->
-    <project name="vendor_samsung" path="vendor/samsung" remote="khalvat" />
+    <project name="android_vendor_vsmart_V430A" path="vendor/vsmart/V430A" remote="hoanglong" />
+    <project name="android_vendor_vsmart_sdm632-common" path="vendor/vsmart/sdm632-common" remote="hoanglong" />
                   
  </manifest>
