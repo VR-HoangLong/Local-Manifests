@@ -2,13 +2,24 @@
  <manifest>
 
  <remote  name="hoanglong"
-    fetch="https://github.com/VR-HoangLong"
+    fetch="https://github.com/long266"
     revision="lineage-19.1" />
-  
+
+ <remote  name="los"
+    fetch="https://github.com/LineageOS"
+    revision="lineage-19.1" />
+
+<remote  name="TheMuppets"
+    fetch="https://github.com/TheMuppets"
+    revision="lineage-19.1" />
+
     <!--Device -->
-    <project name="android_device_vsmart_casuarina" path="device/vsmart/casuarina" remote="hoanglong" />
+    <project name="android_device_fairphone_FP3" path="device/fairphone/FP3" remote="hoanglong" />
     
     <!--Vendor -->
-    <project name="android_vendor_vsmart_casuarina" path="vendor/vsmart/casuarina" remote="hoanglong" />
-                  
+    <project name="proprietary_vendor_fairphone" path="vendor/fairphone" remote="TheMuppets" />
+
+    <!--Kernel -->
+    <project name="android_kernel_fairphone_sdm632" path="kernel/fairphone/sdm632" remote="los" />
+
  </manifest>
